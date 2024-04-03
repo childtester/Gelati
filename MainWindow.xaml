@@ -20,7 +20,17 @@
 
 
         <DataGrid x:Name="dgGelati" SelectionChanged="dgGelati_SelectionChanged" Grid.Column="0" Grid.Row="0" IsReadOnly="True"/>
-        <DataGrid x:Name="dgingre" Grid.Column="1" Grid.Row="0" IsReadOnly="True"/>
+        <DataGrid x:Name="dgingre" Grid.Column="1" Grid.Row="0" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="IdGelato" Binding="{Binding idGelato}"/>
+                <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}"  />
+                <DataGridTextColumn Header="Valore" Binding="{Binding Valore}"/>
+                <DataGridTextColumn Header="Calorie" Binding="{Binding Calorie}"/>
+                <DataGridTextColumn Header="Colorante" Binding="{Binding Colorante}"  />
+                <DataGridTextColumn Header="Lattosio" Binding="{Binding Lattosio}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>
